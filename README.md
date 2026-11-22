@@ -37,9 +37,9 @@ Each package is an alternative controller: install **only one** of them.
 
 | Package | Version | `.dat` file(s) | Entries | Description |
 |---|:---:|---|:---:|---|
-| [CAM Controller](CAM_Controller) | 3.1.1 | `CAM_Main_Controller.dat`<br>`CAM_PlayStyle_Extended.dat` | 188<br>13 | The full CAM simulation with extended stages and play styles. |
-| [SPAM Controller](SPAM_Controller) | 3.1.0 | `CAM_SPAM Controller.dat` | 201 | Updated version of SPAM: fixes agricultural demand without altering the RCI simulation, while keeping the CAM enhancements. |
-| [Vanilla Controller](Vanilla_Controller) | 3.1.1 | `CAM_Vanilla Controller.dat` | 201 | Enhanced vanilla simulation: includes the CAM improvements but keeps the classic Maxis gameplay, without the farm-related changes. |
+| [CAM Controller](CAM_Controller) | 3.1.1 | `CAM_Main_Controller.dat`<br>`CAM_PlayStyle_Extended.dat` | 191<br>13 | The full CAM simulation with extended stages and play styles. |
+| [SPAM Controller](SPAM_Controller) | 3.1.0 | `CAM_SPAM Controller.dat` | 204 | Updated version of SPAM: fixes agricultural demand without altering the RCI simulation, while keeping the CAM enhancements. |
+| [Vanilla Controller](Vanilla_Controller) | 3.1.1 | `CAM_Vanilla Controller.dat` | 204 | Enhanced vanilla simulation: includes the CAM improvements but keeps the classic Maxis gameplay, without the farm-related changes. |
 
 ## Repository structure
 

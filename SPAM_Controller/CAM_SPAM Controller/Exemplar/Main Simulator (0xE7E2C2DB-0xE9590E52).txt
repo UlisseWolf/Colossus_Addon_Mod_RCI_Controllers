@@ -1,0 +1,10 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000007
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Main Simulator"}
+0x09B73421:{"k24HourClockNightBeginProperty"}=Uint32:0:{0x00000014}
+0x09B73422:{"k24HourClockNightEndProperty"}=Uint32:0:{0x00000001}
+0x89590E6D:{"Simulator Speeds"}=Uint32:3:{0x000007D0,0x000003E8,0x00000032}
+0x89590E6E:{"kAnimationTimeDilationProperty"}=Float32:5:{1,1,1.5,3,1}
+0x897E709F:{"24 Hour Clock speed (time magnification)"}=Float32:0:{135}
