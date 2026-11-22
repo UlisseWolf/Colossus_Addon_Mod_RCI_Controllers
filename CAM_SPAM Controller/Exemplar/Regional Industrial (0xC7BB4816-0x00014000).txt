@@ -5,4 +5,4 @@ PropCount=0x00000005
 0x00000020:{"Exemplar Name"}=String:1:{"Regional Industrial"}
 0x47BB3F10:{"Minimum Value"}=Sint32:0:{0xFFFFA240}
 0x47BB3F11:{"Maximum Value"}=Sint32:0:{0x00005DC0}
-0x47BB3F50:{"Sums"}=Uint32:3:{0x00014200,0x00014300,0x00014400}
+0x47BB3F50:{"Sums"}=Uint32:4:{0x00014100,0x00014200,0x00014300,0x00014400}
