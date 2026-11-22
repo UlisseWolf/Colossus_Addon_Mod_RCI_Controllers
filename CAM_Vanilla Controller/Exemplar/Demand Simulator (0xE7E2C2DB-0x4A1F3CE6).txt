@@ -1,0 +1,15 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x0000000C
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Demand Simulator"}
+0x4A1F38B5:{"Demand: Neutral Tax Rate vs. Population"}=Float32:82:{0,9,150000,8.9,300000,8.9,450000,8.8,600000,8.7,750000,8.7,900000,8.6,1.05e+06,8.5,1.2e+06,8.5,1.35e+06,8.4,1.5e+06,8.3,1.65e+06,8.3,1.8e+06,8.2,1.95e+06,8.1,2.1e+06,8,2.25e+06,8,2.4e+06,7.9,2.55e+06,7.8,2.7e+06,7.7,2.85e+06,7.6,3e+06,7.5,3.15e+06,7.4,3.3e+06,7.4,3.45e+06,7.3,3.6e+06,7.2,3.75e+06,7.1,3.9e+06,7,4.05e+06,6.9,4.2e+06,6.7,4.35e+06,6.6,4.5e+06,6.5,4.65e+06,6.4,4.8e+06,6.2,4.95e+06,6.1,5.1e+06,5.9,5.25e+06,5.8,5.4e+06,5.6,5.55e+06,5.4,5.7e+06,5.1,5.85e+06,4.8,6e+06,4}
+0x4A1F38B6:{"Demand: Tax Modifier vs. Rate Variance"}=Float32:6:{0.2,0.3,1,0,5,-3.5}
+0x4A1F38B7:{"Demand: Days of Tax Penalty"}=Uint32:0:{0x0000005A}
+0x4A1F38C5:{"Demand: Commercical Cap Relief for Connections"}=Float32:13:{10000,10000,100000,0,0,0,20000,20000,20000,20000,0,1000,100000}
+0x4A1F38C6:{"Demand: Commercical Cap Relief for Airports"}=Float32:0:{1}
+0x4A1F38C7:{"Demand: Commercical Cap Relief for Seaports"}=Float32:0:{2}
+0x4A1F38C8:{"Demand: Industrial Cap Relief for Trips"}=Float32:0:{20}
+0x4A1F38C9:{"Demand: Industrial Cap Relief for Airports"}=Float32:0:{0.1}
+0x4A1F38CA:{"Demand: Industrial Cap Relief for Seaports"}=Float32:0:{20}
+0x8A63F2A1:{"Average Salary for Demographic"}=Uint32:12:{0x00004268,0x00004B32,0x000053FC,0x00006590,0x000061A8,0x00007A12,0x0000927C,0x0000C350,0x0000AFC8,0x0001A8CE,0x0002A1D4,0x000493E0}

@@ -1,0 +1,19 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000010
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000001}
+0x00000020:{"Exemplar Name"}=String:1:{"Neighbor Deals"}
+0x0A469353:{"NDe_ProfitResponseCurve"}=Float32:8:{0,1,0.1,0.3,0.3,0.1,1,0}
+0x4B61FFC9:{"NDe_MaxUnitCostForGarbageDealsRCurve"}=Float32:6:{0,1e-05,0.0075,0.0075,1,0.075}
+0x6A469337:{"NDb_MinDealAmountWater"}=Float32:0:{1000}
+0x6A469342:{"NDc_MinDealProfitFactor"}=Float32:0:{0.1}
+0x6B588FAD:{"NDd_SuspensionPeriod"}=Float32:0:{90}
+0x8A46933D:{"NDb_MinDealAmountGarbage"}=Float32:0:{1000}
+0x8B58C59E:{"NDd_UnsuspensionPeriod"}=Float32:0:{90}
+0xAA46934B:{"NDd_MinDealTerm (years)"}=Float32:0:{1}
+0xCA46931F:{"NDa_MinTermToSustainSellDealCost (months)"}=Float32:0:{60}
+0xCA469346:{"NDc_MaxDealProfitFactor"}=Float32:0:{0.5}
+0xEA46932C:{"NDb_MinDealAmountPower"}=Float32:0:{1000}
+0xEA46934F:{"NDd_MaxDealTerm (years)"}=Float32:0:{1}
+0xEA4AD2FF:{"NDa_MaxOverDemandFactorForBuyer"}=Float32:0:{2.5}
+0xEA4AE9EF:{"NDa_MinBudgetForBuyDeals"}=Float32:0:{5000}

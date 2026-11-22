@@ -1,0 +1,14 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x0000000B
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Flame"}
+0xA9B6ECD3:{"Stage Time"}=Uint32:5:{0x0000001E,0x00000019,0x00000014,0x00000014,0x00000019}
+0xA9B6ECD4:{"Spread Time"}=Uint32:5:{0x00000004,0x00000003,0x00000002,0x00000002,0x00000001}
+0xA9B6ECD5:{"Spread Radius"}=Uint32:5:{0x00000020,0x00000030,0x00000030,0x00000050,0x00000050}
+0xA9B6ECD6:{"Wind Scalar"}=Float32:0:{1}
+0xA9B6ECD7:{"Fires / Area (Top)"}=Float32:4:{0,1,10000,5}
+0xA9B6ECD8:{"Fires / Area (Side)"}=Float32:6:{0,0,10000,6,50000,8}
+0xA9B6ECD9:{"Extinguish Rate vs. Protection"}=Float32:14:{0,0,0.25,0.1,50,0.5,75,1.5,100,4,150,8,200,10}
+0xA9B6ECDA:{"Percent FireStart vs. Flammability"}=Float32:16:{0,0,30,5,50,10,75,20,90,30,115,40,160,50,200,50}
+0xCA821B8C:{"Go To Zoom Level"}=Uint8:0:{0x03}
