@@ -13,8 +13,11 @@ Usage
     python tools/build_dat.py "CAM_Controller/CAM_Main_Controller"
     python tools/build_dat.py SRC_DIR -o out/My.dat   # build one .dat to a given path
 
-With no ``-o`` a package folder ``<Package>/<Name>`` is written to
-``build/<Package>/a_CAM/0 CAM Controller/<Name>.dat``, ready to copy into the Plugins folder.
+A .dat source folder is a folder whose subfolders (Exemplar, LTEXT, ...) hold the entries.
+It can sit at the repository root (``<Name>``) or inside a package folder
+(``<Package>/<Name>``). With no ``-o`` it is written to
+``build/<Package>/a_CAM/0 CAM Controller/<Name>.dat`` (``<Package>`` is ``<Name>`` for
+root-level folders), ready to copy into the Plugins folder.
 
 Requires Python 3.8+ and no third-party modules.
 """
@@ -179,16 +182,29 @@ def write_dbpf(entries, out_path):
         fh.write(header + body + index)
 
 
+def is_dat_folder(path):
+    """True if a direct subfolder of ``path`` contains .TGI files."""
+    for sub in os.listdir(path):
+        sp = os.path.join(path, sub)
+        if os.path.isdir(sp) and any(f.endswith(".TGI") for f in os.listdir(sp)):
+            return True
+    return False
+
+
 def find_dat_folders(repo):
-    """A .dat folder is a folder inside a package folder (<repo>/<Package>/<Name>)."""
+    """Return (package, name, path) for every .dat source folder in the repository."""
     result = []
-    for pkg in sorted(os.listdir(repo)):
-        pdir = os.path.join(repo, pkg)
-        if not os.path.isdir(pdir) or pkg.startswith(".") or pkg in ("tools", "build"):
+    for top in sorted(os.listdir(repo)):
+        tdir = os.path.join(repo, top)
+        if not os.path.isdir(tdir) or top.startswith(".") or top in ("tools", "build"):
             continue
-        for name in sorted(os.listdir(pdir)):
-            if os.path.isdir(os.path.join(pdir, name)):
-                result.append((pkg, name))
+        if is_dat_folder(tdir):
+            result.append((top, top, tdir))
+            continue
+        for name in sorted(os.listdir(tdir)):
+            ndir = os.path.join(tdir, name)
+            if os.path.isdir(ndir) and is_dat_folder(ndir):
+                result.append((top, name, ndir))
     return result
 
 
@@ -217,9 +233,11 @@ def main():
             targets = []
             for s in args.src:
                 s = os.path.abspath(s)
-                targets.append((os.path.basename(os.path.dirname(s)), os.path.basename(s), s))
+                parent = os.path.dirname(s)
+                pkg = os.path.basename(s) if os.path.samefile(parent, repo) else os.path.basename(parent)
+                targets.append((pkg, os.path.basename(s), s))
         else:
-            targets = [(p, n, os.path.join(repo, p, n)) for p, n in find_dat_folders(repo)]
+            targets = find_dat_folders(repo)
         for pkg, name, src in targets:
             build(src, os.path.join(args.build_dir, pkg, "a_CAM", "0 CAM Controller", name + ".dat"))
     except BuildError as exc:

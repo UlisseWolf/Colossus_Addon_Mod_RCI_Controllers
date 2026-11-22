@@ -38,29 +38,28 @@ Each package is an alternative controller: install **only one** of them.
 | Package | Version | `.dat` file(s) | Entries | Description |
 |---|:---:|---|:---:|---|
 | [CAM Controller](CAM_Controller) | 3.1.1 | `CAM_Main_Controller.dat`<br>`CAM_PlayStyle_Extended.dat` | 191<br>13 | The full CAM simulation with extended stages and play styles. |
-| [SPAM Controller](SPAM_Controller) | 3.1.0 | `CAM_SPAM Controller.dat` | 204 | Updated version of SPAM: fixes agricultural demand without altering the RCI simulation, while keeping the CAM enhancements. |
-| [Vanilla Controller](Vanilla_Controller) | 3.1.1 | `CAM_Vanilla Controller.dat` | 204 | Enhanced vanilla simulation: includes the CAM improvements but keeps the classic Maxis gameplay, without the farm-related changes. |
+| [SPAM Controller](CAM_SPAM%20Controller) | 3.1.0 | `CAM_SPAM Controller.dat` | 204 | Updated version of SPAM: fixes agricultural demand without altering the RCI simulation, while keeping the CAM enhancements. |
+| [Vanilla Controller](CAM_Vanilla%20Controller) | 3.1.1 | `CAM_Vanilla Controller.dat` | 204 | Enhanced vanilla simulation: includes the CAM improvements but keeps the classic Maxis gameplay, without the farm-related changes. |
 
 ## Repository structure
 
-Each top-level folder holds one controller package; [`tools/`](tools) contains the build script. Every `.dat` file is replaced by a folder with the same name, which holds one subfolder per entry type:
+Each controller has its own folder; [`tools/`](tools) contains the build script. Every `.dat` file is stored as a folder with the same name, which holds one subfolder per entry type:
 
 ```text
-<Package>_Controller/
-└── <dat file name>/
-    ├── Exemplar/
-    │   ├── <Exemplar Name> (0xGROUP-0xINSTANCE).txt
-    │   └── <Exemplar Name> (0xGROUP-0xINSTANCE).txt.TGI
-    └── LTEXT/
-        ├── LTEXT (0xGROUP-0xINSTANCE).txt
-        └── LTEXT (0xGROUP-0xINSTANCE).txt.TGI
+<dat file name>/
+├── Exemplar/
+│   ├── <Exemplar Name> (0xGROUP-0xINSTANCE).txt
+│   └── <Exemplar Name> (0xGROUP-0xINSTANCE).txt.TGI
+└── LTEXT/
+    ├── LTEXT (0xGROUP-0xINSTANCE).txt
+    └── LTEXT (0xGROUP-0xINSTANCE).txt.TGI
 ```
 
-| Folder | Package |
-|---|---|
-| `CAM_Controller/` | Colossus Addon Mod – CAM Controller 3.1.1 |
-| `SPAM_Controller/` | Colossus Addon Mod – SPAM Controller 3.1.0 |
-| `Vanilla_Controller/` | Colossus Addon Mod – Vanilla Controller 3.1.1 |
+| Folder | Package | `.dat` file(s) |
+|---|---|---|
+| `CAM_Controller/` | Colossus Addon Mod – CAM Controller 3.1.1 | `CAM_Main_Controller/`, `CAM_PlayStyle_Extended/` |
+| `CAM_SPAM Controller/` | Colossus Addon Mod – SPAM Controller 3.1.0 | the folder itself |
+| `CAM_Vanilla Controller/` | Colossus Addon Mod – Vanilla Controller 3.1.1 | the folder itself |
 
 ## File format
 
@@ -111,10 +110,10 @@ python tools/build_dat.py
 python tools/build_dat.py "CAM_Controller/CAM_Main_Controller"
 
 # Build a single .dat to a custom path
-python tools/build_dat.py "SPAM_Controller/CAM_SPAM Controller" -o "out/CAM_SPAM Controller.dat"
+python tools/build_dat.py "CAM_SPAM Controller" -o "out/CAM_SPAM Controller.dat"
 ```
 
-By default the output goes to `build/<Package>/a_CAM/0 CAM Controller/<Name>.dat`, the same layout as the release archives, so the `a_CAM` folder can be copied straight into the Plugins folder.
+By default the output goes to `build/<Folder>/a_CAM/0 CAM Controller/<Name>.dat` (for example `build/CAM_Controller/…` or `build/CAM_SPAM Controller/…`), the same layout as the release archives, so the `a_CAM` folder can be copied straight into the Plugins folder.
 
 The script checks every file while building: a malformed line, a wrong `PropCount`, a value count that does not match `Reps` or a duplicate TGI stops the build with the file name and line number. Packages built from the unmodified sources contain exactly the same entries as the released `.dat` files.
 
@@ -141,7 +140,7 @@ No DLL dependencies are required.
 ## Installation
 
 1. Build the package you want with `python tools/build_dat.py` (see [Building a .dat file](#building-a-dat-file)), or download the released archive.
-2. Copy the `a_CAM` folder from `build/<Package>/` into `Documents\SimCity 4\Plugins` (or your custom Plugins folder).
+2. Copy the `a_CAM` folder from `build/<Folder>/` into `Documents\SimCity 4\Plugins` (or your custom Plugins folder).
 3. Remove any previous CAM version from your plugins. Using [SC4 Cleanitol](https://community.simtropolis.com/files/file/35790-sc4-cleanitol/) is highly recommended.
 
 > [!IMPORTANT]
