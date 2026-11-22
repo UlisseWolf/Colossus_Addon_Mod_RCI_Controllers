@@ -1,0 +1,6 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000003
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000003}
+0x00000020:{"Exemplar Name"}=String:1:{"Workforce $ EQ2"}
+0x47BB3F60:{"Region Use"}=Uint8:0:{0x01}

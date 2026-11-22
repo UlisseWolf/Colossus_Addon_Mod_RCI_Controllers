@@ -1,0 +1,6 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000003
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000003}
+0x00000020:{"Exemplar Name"}=String:1:{"Total Cs Census"}
+0x47BB3F50:{"Sums"}=Uint32:3:{0x00023111,0x00023121,0x00023131}
