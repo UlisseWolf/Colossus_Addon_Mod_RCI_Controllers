@@ -35,15 +35,15 @@ The RCI controllers are the core of the mod: they define the demand sources, the
 
 Each package is an alternative controller: install **only one** of them.
 
-| Package | Version | `.dat` file(s) | Entries | Description |
+| Package | Version | `.dat` file | Entries | Description |
 |---|:---:|---|:---:|---|
-| [CAM Controller](CAM_Controller) | 3.1.1 | `CAM_Main_Controller.dat`<br>`CAM_PlayStyle_Extended.dat` | 191<br>13 | The full CAM simulation with extended stages and play styles. |
+| [CAM Controller](CAM_Controller) | 3.1.1 | `CAM_Controller.dat` | 204 | The full CAM simulation with extended stages and play styles. |
 | [SPAM Controller](CAM_SPAM%20Controller) | 3.1.0 | `CAM_SPAM Controller.dat` | 204 | Updated version of SPAM: fixes agricultural demand without altering the RCI simulation, while keeping the CAM enhancements. |
 | [Vanilla Controller](CAM_Vanilla%20Controller) | 3.1.1 | `CAM_Vanilla Controller.dat` | 204 | Enhanced vanilla simulation: includes the CAM improvements but keeps the classic Maxis gameplay, without the farm-related changes. |
 
 ## Repository structure
 
-Each controller has its own folder; [`tools/`](tools) contains the build script. Every `.dat` file is stored as a folder with the same name, which holds one subfolder per entry type:
+Each controller is one `.dat` file, stored as a folder with the same name; [`tools/`](tools) contains the build script. Each folder holds one subfolder per entry type:
 
 ```text
 <dat file name>/
@@ -55,11 +55,11 @@ Each controller has its own folder; [`tools/`](tools) contains the build script.
     └── LTEXT (0xGROUP-0xINSTANCE).txt.TGI
 ```
 
-| Folder | Package | `.dat` file(s) |
-|---|---|---|
-| `CAM_Controller/` | Colossus Addon Mod – CAM Controller 3.1.1 | `CAM_Main_Controller/`, `CAM_PlayStyle_Extended/` |
-| `CAM_SPAM Controller/` | Colossus Addon Mod – SPAM Controller 3.1.0 | the folder itself |
-| `CAM_Vanilla Controller/` | Colossus Addon Mod – Vanilla Controller 3.1.1 | the folder itself |
+| Folder | Package |
+|---|---|
+| `CAM_Controller/` | Colossus Addon Mod – CAM Controller 3.1.1 |
+| `CAM_SPAM Controller/` | Colossus Addon Mod – SPAM Controller 3.1.0 |
+| `CAM_Vanilla Controller/` | Colossus Addon Mod – Vanilla Controller 3.1.1 |
 
 ## File format
 
@@ -107,13 +107,13 @@ The [`tools/build_dat.py`](tools/build_dat.py) script assembles the `.dat` packa
 python tools/build_dat.py
 
 # Build a single .dat
-python tools/build_dat.py "CAM_Controller/CAM_Main_Controller"
+python tools/build_dat.py "CAM_Controller"
 
 # Build a single .dat to a custom path
 python tools/build_dat.py "CAM_SPAM Controller" -o "out/CAM_SPAM Controller.dat"
 ```
 
-By default the output goes to `build/<Folder>/a_CAM/0 CAM Controller/<Name>.dat` (for example `build/CAM_Controller/…` or `build/CAM_SPAM Controller/…`), the same layout as the release archives, so the `a_CAM` folder can be copied straight into the Plugins folder.
+By default the output goes to `build/<Folder>/a_CAM/0 CAM Controller/<Folder>.dat` (for example `build/CAM_Controller/a_CAM/0 CAM Controller/CAM_Controller.dat`), the same layout as the release archives, so the `a_CAM` folder can be copied straight into the Plugins folder.
 
 The script checks every file while building: a malformed line, a wrong `PropCount`, a value count that does not match `Reps` or a duplicate TGI stops the build with the file name and line number. Packages built from the unmodified sources contain exactly the same entries as the released `.dat` files.
 
