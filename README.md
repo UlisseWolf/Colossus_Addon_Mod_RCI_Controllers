@@ -43,7 +43,7 @@ Each package is an alternative controller: install **only one** of them.
 
 ## Repository structure
 
-Each top-level folder holds one controller package. Every `.dat` file is replaced by a folder with the same name, which holds one subfolder per entry type:
+Each top-level folder holds one controller package; [`tools/`](tools) contains the build script. Every `.dat` file is replaced by a folder with the same name, which holds one subfolder per entry type:
 
 ```text
 <Package>_Controller/
@@ -99,6 +99,27 @@ E7E2C2DB
 
 ## Building a .dat file
 
+### With the build script (recommended)
+
+The [`tools/build_dat.py`](tools/build_dat.py) script assembles the `.dat` packages from the text sources. It needs only **Python 3.8+** and no extra modules.
+
+```bash
+# Build every package into ./build
+python tools/build_dat.py
+
+# Build a single .dat
+python tools/build_dat.py "CAM_Controller/CAM_Main_Controller"
+
+# Build a single .dat to a custom path
+python tools/build_dat.py "SPAM_Controller/CAM_SPAM Controller" -o "out/CAM_SPAM Controller.dat"
+```
+
+By default the output goes to `build/<Package>/a_CAM/0 CAM Controller/<Name>.dat`, the same layout as the release archives, so the `a_CAM` folder can be copied straight into the Plugins folder.
+
+The script checks every file while building: a malformed line, a wrong `PropCount`, a value count that does not match `Reps` or a duplicate TGI stops the build with the file name and line number. Packages built from the unmodified sources contain exactly the same entries as the released `.dat` files.
+
+### Manually with Reader
+
 1. Open **Reader** (or **iLive's Reader**) and create a new, empty file.
 2. Right-click in the entry list and choose **Import File**.
 3. Select an entry `.txt` file and give it the Type, Group and Instance listed in the matching `.TGI` file.
@@ -119,8 +140,8 @@ No DLL dependencies are required.
 
 ## Installation
 
-1. Build the `.dat` file(s) of the package you want (see [Building a .dat file](#building-a-dat-file)), or download the released archive.
-2. Put the `.dat` file(s) in `Documents\SimCity 4\Plugins\a_CAM\0 CAM Controller` (or the same path in your custom Plugins folder).
+1. Build the package you want with `python tools/build_dat.py` (see [Building a .dat file](#building-a-dat-file)), or download the released archive.
+2. Copy the `a_CAM` folder from `build/<Package>/` into `Documents\SimCity 4\Plugins` (or your custom Plugins folder).
 3. Remove any previous CAM version from your plugins. Using [SC4 Cleanitol](https://community.simtropolis.com/files/file/35790-sc4-cleanitol/) is highly recommended.
 
 > [!IMPORTANT]
@@ -132,7 +153,8 @@ Bug reports and suggestions are welcome through [Issues](../../issues). For chan
 
 1. Fork the repository and create a branch from `staging`.
 2. Edit the text exemplars, keeping the `EQZT1###` format and the matching `.TGI` files.
-3. Open a pull request that describes what changes in the simulation and why.
+3. Run `python tools/build_dat.py` to make sure everything still builds, and test the result in game.
+4. Open a pull request that describes what changes in the simulation and why.
 
 ## Credits
 
