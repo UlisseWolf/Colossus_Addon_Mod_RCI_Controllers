@@ -1,0 +1,12 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000009
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Fire Protection Simulator"}
+0x29233E8D:{"FireProtectionSim, Funding Efficiency Curve"}=Float32:12:{0,10,50,25,75,45,90,75,100,100,120,110}
+0x29233E8F:{"FireProtectionSim, Max Allowed Funding"}=Float32:0:{120}
+0x29233E94:{"FireProtectionSim, Strike Efficiency Multiplier"}=Float32:0:{0.2}
+0x29233E95:{"FireProtectionSim, Max Strike Duration"}=Sint32:0:{0x00000224}
+0x29233E96:{"FireProtectionSim, Min Funding To End Strikes"}=Float32:0:{90}
+0x29233E98:{"FireProtectionSim, Strike Response Curve"}=Float32:8:{0,100,25,25,50,10,70,0}
+0x69B425DB:{"FireProtectionSim, StationNoRoad Multiplier"}=Float32:0:{0.8}

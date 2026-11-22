@@ -1,0 +1,11 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000008
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Flammability Simulator"}
+0x29B40134:{"Flammability multiplier, abandonment"}=Float32:0:{1.5}
+0x29B4013B:{"Flammability multiplier, no water"}=Float32:0:{1.25}
+0x29B4013C:{"Flammability, hotspot settings"}=Uint32:3:{0x00000036,0x00000008,0x00000028}
+0x29B4013D:{"Flammability, hotspot fire probability"}=Float32:12:{0,0,39,0,40,7,50,15,70,20,100,25}
+0x29B4013E:{"Flammability, random fire probability"}=Float32:0:{5}
+0xC9B40128:{"Flammability multiplier, summer"}=Float32:0:{1}

@@ -1,0 +1,17 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x0000000E
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Police Simulator"}
+0x68DDAE93:{"Police, Funding To Efficiency Response Curve"}=Float32:6:{0,0,100,100,120,110}
+0x68DDAE95:{"Police, Max Allowed Funding Percentage"}=Float32:0:{120}
+0x68DDAE97:{"Police, Monthly Criminal Rehabilitation Percent"}=Float32:0:{10}
+0x68DDAE9A:{"Police, Strike Efficiency"}=Float32:0:{100}
+0x68DDAE9B:{"Police, Max Strike Duration"}=Sint32:0:{0x00000000}
+0x68DDAE9C:{"Police, Min Funding To End Strikes"}=Float32:0:{0}
+0x68DDAE9E:{"Police, Strike Response Curve"}=Float32:8:{0,0,25,0,50,0,70,0}
+0x68DDAE9F:{"Police, Arrest Threshold"}=Uint32:0:{0x00000014}
+0x68DDAEA0:{"Jail, Funding To Efficiency Response Curve"}=Float32:6:{0,0,100,100,120,110}
+0xEA614F63:{"Jail, Jailbreak Response Curve"}=Float32:8:{0,0,80,0,90,10,100,100}
+0xEA614F64:{"Jail, Jailbreak Escapee Percentage"}=Float32:2:{10,50}
+0xEA614F65:{"Jail, End Jailbreak Capacity"}=Float32:0:{80}

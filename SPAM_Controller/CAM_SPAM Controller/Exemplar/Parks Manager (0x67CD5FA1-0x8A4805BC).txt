@@ -1,0 +1,8 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000005
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000004}
+0x00000020:{"Exemplar Name"}=String:1:{"Parks Manager"}
+0x4A6676AD:{"Zoo Escape Chance Curve"}=Float32:6:{0,40,25,10,100,1}
+0xCA480830:{"Efficiency Distress Threshold"}=Float32:0:{25}
+0xCA480831:{""}=Sint64:0:{0x0000000000000000}

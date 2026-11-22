@@ -1,0 +1,10 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000007
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000003}
+0x00000020:{"Exemplar Name"}=String:1:{"Commercial Office $$"}
+0x47BB3F10:{"Minimum Value"}=Sint32:0:{0xFFFFD8F0}
+0x47BB3F11:{"Maximum Value"}=Sint32:0:{0x0000D2F0}
+0x47BB3F31:{"Satisfies"}=Uint32:2:{0x00023320,0x00000064}
+0x47BB3F32:{"Contributes"}=Uint32:2:{0x00023320,0x00000064}
+0x47BB3F60:{"Region Use"}=Uint8:0:{0x01}

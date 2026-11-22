@@ -1,0 +1,7 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000004
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000003}
+0x00000020:{"Exemplar Name"}=String:1:{"Total R$$$"}
+0x47BB3F10:{"Minimum Value"}=Sint32:0:{0xFFFFD8F0}
+0x47BB3F11:{"Maximum Value"}=Sint32:0:{0x0000D2F0}

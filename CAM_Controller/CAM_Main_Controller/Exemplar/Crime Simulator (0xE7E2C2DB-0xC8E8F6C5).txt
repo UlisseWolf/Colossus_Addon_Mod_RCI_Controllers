@@ -1,0 +1,16 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x0000000D
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Crime Simulator"}
+0x49A34301:{"Crime Prop Request Curve"}=Float32:10:{0,0,0.1,2,0.2,4,0.4,6,1,10}
+0x8A0CBAA4:{"Crime, R$: EQ -) Base Criminality Curve"}=Float32:6:{0,0.4,100,0.3,200,0}
+0x8A0CBAA5:{"Crime, R$$: EQ -) Base Criminality Curve"}=Float32:6:{0,0.15,100,0.11,200,0}
+0x8A0CBAA6:{"Crime, R$$$: EQ -) Base Criminality Curve"}=Float32:6:{0,0.1,100,0.07,200,0}
+0x8A0CBAA7:{"Crime, R$: Jobless ratio -) Criminality Curve"}=Float32:10:{-1,0.1,-0.7,0.07,0,0,0.7,-0.07,1,-0.1}
+0x8A0CBAA8:{"Crime, R$$: Jobless ratio -) Criminality Curve"}=Float32:10:{-1,0.07,-0.7,0.05,0,0,0.7,-0.05,1,-0.07}
+0x8A0CBAA9:{"Crime, R$$$: Jobless ratio -) Criminality Curve"}=Float32:10:{-1,0.05,-0.7,0.03,0,0,0.7,-0.03,1,-0.05}
+0x8A0CBAAA:{"Crime, Criminality -) Crimes Curve"}=Float32:18:{0,0,200,1,5000,5,10000,10,20000,25,200000,40,400000,55,600000,60,900000,65}
+0x8A0CBAAB:{"Crime, Police Protection -) Crime Attenuation"}=Float32:8:{0,0,100,0.5,200,0.75,255,1}
+0x8A0CBAAC:{"Crime, Crime Grid Decay Factor"}=Float32:0:{0.8}
+0x8A0CBAAD:{"Crime, Criminal Grid Decay Factor"}=Float32:0:{0.66}

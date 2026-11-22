@@ -1,0 +1,13 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x0000000A
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Ordinance Simulator"}
+0xA8EAA060:{""}=Float32:0:{5}
+0xA8EAA061:{""}=Uint32:0:{0x000000C8}
+0xA8EAA062:{""}=Uint32:0:{0x0000001E}
+0xA8EAA063:{""}=Uint32:0:{0x000007A8}
+0xA8EAA064:{""}=Uint32:0:{0x00000003}
+0xA8EAA065:{""}=Uint32:0:{0x00000003}
+0xA8EAA066:{""}=Uint32:0:{0x00000001}
+0xA8EAA067:{""}=Uint32:0:{0x00000001}
