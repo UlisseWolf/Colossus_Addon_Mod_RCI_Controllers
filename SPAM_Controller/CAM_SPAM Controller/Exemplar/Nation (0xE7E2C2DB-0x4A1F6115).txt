@@ -1,0 +1,8 @@
+EQZT1###
+ParentCohort=Key:{0x00000000,0x00000000,0x00000000}
+PropCount=0x00000005
+0x00000010:{"Exemplar Type"}=Uint32:0:{0x00000005}
+0x00000020:{"Exemplar Name"}=String:1:{"Nation"}
+0x4A1F629F:{"Nation: Demand ID list"}=Uint32:1:{0x00000000}
+0x4A1F62A0:{"Nation: Default Demand Modifier vs. Month"}=Float32:2:{0,0}
+0x4A1F6300:{"Nation: Difficulty Demand Modifier"}=Float32:3:{0.06,0.03,0.01}
