@@ -1,27 +1,30 @@
-# Colossus_Addon_Mod
-Colossus Addon Mod is SimCity 4 mod that changes RCI (Residential Comemrcial Industrial) development by extending gameplay as well as fixing bugfixes 
+# Colossus Addon Mod - RCI Controllers
 
-## Features
+Colossus Addon Mod (CAM) is a SimCity 4 mod that changes RCI (Residential - Commercial - Industrial) development, extending gameplay and fixing bugs.
 
-TBA
+This repository contains the **readable source** of the three CAM RCI controller packages. Every `.dat` file has been unpacked: each entry (exemplar, LTEXT) is stored as a plain-text file, so changes can be reviewed and compared with Git.
 
-## Installation
+## Packages
 
-TBA
+| Package | Version | `.dat` files |
+|---|---|---|
+| [CAM Controller](Colossus_Addon_Mod_-_CAM_Controller_V_3.1.1/) | 3.1.1 | [CAM_Main_Controller.dat](Colossus_Addon_Mod_-_CAM_Controller_V_3.1.1/a_CAM/0%20CAM%20Controller/CAM_Main_Controller/INDEX.md), [CAM_PlayStyle_Extended.dat](Colossus_Addon_Mod_-_CAM_Controller_V_3.1.1/a_CAM/0%20CAM%20Controller/CAM_PlayStyle_Extended/INDEX.md) |
+| [SPAM Controller](Colossus_Addon_Mod_-_SPAM_Controller_V_3.1.0/) | 3.1.0 | [CAM_SPAM Controller.dat](Colossus_Addon_Mod_-_SPAM_Controller_V_3.1.0/a_CAM/0%20CAM%20Controller/CAM_SPAM%20Controller/INDEX.md) |
+| [Vanilla Controller](Colossus_Addon_Mod_-_Vanilla_Controller_V3.1.1/) | 3.1.1 | [CAM_Vanilla Controller.dat](Colossus_Addon_Mod_-_Vanilla_Controller_V3.1.1/a_CAM/0%20CAM%20Controller/CAM_Vanilla%20Controller/INDEX.md) |
 
-## Compiling .dat File
+## File format
 
-Within the two folders are contained two files. For the sake of simplification, the structure of the two files and their meaning are shown below
+- **Exemplars** are saved as SC4 text exemplars (`EQZT1###`), one property per line:
 
-   * Name File.lua -> The file that contains the LUA code
-   * Name File.lua.TGI -> The file that contains the TGI of the LUA code.
-   
-In order to generate a .dat file that the format needed for the code to be read by the game you have to use a tool such as Reader or Ilives Reader.
+  ```
+  0xPROPERTYID:{"Property Name"}=Type:Reps:{values}
+  ```
 
-Once the program is open you should create an empty file and from there prmete the right mouse button to open a dropdown and select Import File.
+  `Reps` is `0` for a single value, otherwise the number of values. Property names come from [New_Properties.xml-patches](https://github.com/UlisseWolf/New_Properties.xml-patches). Numbers are written losslessly: converting a text file back to binary gives exactly the original entry.
+- **LTEXT** entries are saved as UTF-8 text.
+- Next to each file there is a `.TGI` file with three lines: Type, Group and Instance of the entry.
+- Every unpacked `.dat` folder contains an `INDEX.md` listing all its entries with their TGI.
 
-Once this is done select the .lua file and press open.
+## Compiling a .dat file
 
-After you have done this procedure you have to press yes at the information window where there is this step *No Entry Selected. Append to End?* and then an Unknown file appears with the exact TGI and LUA code.
-
-Save the new file and reopen it to get the LUA file instead of Unknown
+Create a new empty file in Reader (or iLive's Reader), right-click → *Import File*, select a `.txt` exemplar and set the Type, Group and Instance shown in the matching `.TGI` file. Repeat for every entry, then save the `.dat`.
