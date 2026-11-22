@@ -37,26 +37,30 @@ Each package is an alternative controller: install **only one** of them.
 
 | Package | Version | `.dat` file(s) | Entries | Description |
 |---|:---:|---|:---:|---|
-| [CAM Controller](Colossus_Addon_Mod_-_CAM_Controller_V_3.1.1) | 3.1.1 | `CAM_Main_Controller.dat`<br>`CAM_PlayStyle_Extended.dat` | 116<br>13 | The full CAM simulation with extended stages and play styles. |
-| [SPAM Controller](Colossus_Addon_Mod_-_SPAM_Controller_V_3.1.0) | 3.1.0 | `CAM_SPAM Controller.dat` | 17 | Updated version of SPAM: fixes agricultural demand without altering the RCI simulation, while keeping the CAM enhancements. |
-| [Vanilla Controller](Colossus_Addon_Mod_-_Vanilla_Controller_V3.1.1) | 3.1.1 | `CAM_Vanilla Controller.dat` | 11 | Enhanced vanilla simulation: includes the CAM improvements but keeps the classic Maxis gameplay, without the farm-related changes. |
+| [CAM Controller](CAM_Controller) | 3.1.1 | `CAM_Main_Controller.dat`<br>`CAM_PlayStyle_Extended.dat` | 116<br>13 | The full CAM simulation with extended stages and play styles. |
+| [SPAM Controller](SPAM_Controller) | 3.1.0 | `CAM_SPAM Controller.dat` | 17 | Updated version of SPAM: fixes agricultural demand without altering the RCI simulation, while keeping the CAM enhancements. |
+| [Vanilla Controller](Vanilla_Controller) | 3.1.1 | `CAM_Vanilla Controller.dat` | 11 | Enhanced vanilla simulation: includes the CAM improvements but keeps the classic Maxis gameplay, without the farm-related changes. |
 
 ## Repository structure
 
-Each top-level folder corresponds to one release archive and mirrors its layout. Every `.dat` file is replaced by a folder with the same name, which holds one subfolder per entry type:
+Each top-level folder holds one controller package. Every `.dat` file is replaced by a folder with the same name, which holds one subfolder per entry type:
 
 ```text
-Colossus_Addon_Mod_-_<Package>_V<version>/
-└── a_CAM/
-    └── 0 CAM Controller/
-        └── <dat file name>/
-            ├── Exemplar/
-            │   ├── <Exemplar Name> (0xGROUP-0xINSTANCE).txt
-            │   └── <Exemplar Name> (0xGROUP-0xINSTANCE).txt.TGI
-            └── LTEXT/
-                ├── LTEXT (0xGROUP-0xINSTANCE).txt
-                └── LTEXT (0xGROUP-0xINSTANCE).txt.TGI
+<Package>_Controller/
+└── <dat file name>/
+    ├── Exemplar/
+    │   ├── <Exemplar Name> (0xGROUP-0xINSTANCE).txt
+    │   └── <Exemplar Name> (0xGROUP-0xINSTANCE).txt.TGI
+    └── LTEXT/
+        ├── LTEXT (0xGROUP-0xINSTANCE).txt
+        └── LTEXT (0xGROUP-0xINSTANCE).txt.TGI
 ```
+
+| Folder | Package |
+|---|---|
+| `CAM_Controller/` | Colossus Addon Mod – CAM Controller 3.1.1 |
+| `SPAM_Controller/` | Colossus Addon Mod – SPAM Controller 3.1.0 |
+| `Vanilla_Controller/` | Colossus Addon Mod – Vanilla Controller 3.1.1 |
 
 ## File format
 
@@ -116,7 +120,7 @@ No DLL dependencies are required.
 ## Installation
 
 1. Build the `.dat` file(s) of the package you want (see [Building a .dat file](#building-a-dat-file)), or download the released archive.
-2. Copy the `a_CAM` folder into `Documents\SimCity 4\Plugins` (or your custom Plugins folder).
+2. Put the `.dat` file(s) in `Documents\SimCity 4\Plugins\a_CAM\0 CAM Controller` (or the same path in your custom Plugins folder).
 3. Remove any previous CAM version from your plugins. Using [SC4 Cleanitol](https://community.simtropolis.com/files/file/35790-sc4-cleanitol/) is highly recommended.
 
 > [!IMPORTANT]
